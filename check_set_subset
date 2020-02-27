@@ -1,0 +1,17 @@
+N = int(raw_input())
+for _ in range(N):
+    n_elements = int(raw_input())
+    subset_elements=raw_input().split()
+    for i in range(n_elements):
+        subset_elements[i] = int(subset_elements[i])
+    n_elements = int(raw_input())
+    super_elements=raw_input().split()
+    for i in range(n_elements):
+        super_elements[i] = int(super_elements[i])
+    
+    subset_elements_1 = set(subset_elements)
+    super_elements_1 = set(super_elements)
+    if(subset_elements_1.difference(super_elements_1)):
+        print("False")
+    else:
+        print("True")
